@@ -7,8 +7,10 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.42.6"
+    "svelte": "^3.44.0",
+    "vite-plugin-windicss": "latest"
   },
   "type": "module"
 }
