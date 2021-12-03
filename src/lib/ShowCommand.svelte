@@ -8,7 +8,7 @@
     }
 </script>
 <div class="bg-black text-white p-3 rounded-lg flex justify-between">
-    <span class="block whitespace-pre">{typeof command=='string'?command:JSON.stringify(command,null,4)}</span>
+    <span class="block whitespace-pre overflow-auto">{typeof command=='string'?command:JSON.stringify(command,null,4)}</span>
     {#if copied}
         <span class="block text-xs" on:click={handleCopy}>
                 Copied
