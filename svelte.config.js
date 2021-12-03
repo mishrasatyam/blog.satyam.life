@@ -1,5 +1,5 @@
 import WindiCSS from 'vite-plugin-windicss';
-import build from '@sveltejs/adapter-node';
+import build from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
