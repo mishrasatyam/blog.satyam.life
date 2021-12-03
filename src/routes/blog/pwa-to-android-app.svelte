@@ -6,7 +6,7 @@
     <header class="font-bold text-xl {$color_mode=='light'?'text-black':'text-white'}">Generate Android app from a svelte kit website</header>
     <h3 class="text-xs text-gray-500">2nd December 2021</h3>
     <div>
-        <header class="font-semibold">This blog tells you how to convert any PWA (with svelte kit example) to an android app using node js.</header>
+        <header class="">This blog tells you how to convert any PWA (with svelte kit example) to an android app using node js.</header>
         <div>
           <header class="font-bold shadow-lg text-white bg-blue-500 p-4 rounded-lg">Step 0 : Environment</header>
           <div class="bg-purple-200 mt-5 p-4 rounded-lg shadow-lg">
