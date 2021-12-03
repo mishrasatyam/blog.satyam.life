@@ -6,7 +6,6 @@
     import {browser} from '$app/env'
 
     if(browser){
-        console.log($color_mode)
         if($color_mode=='dark'){
             document.body.classList.add('black')
         }else{
