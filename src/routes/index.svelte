@@ -1,22 +1,14 @@
 <script>
-    export let blog_list = [{
-        params:'pwa-to-android-app',
-        heading: 'Generate Android app from a PWA',
-        date:'2nd December 2021',
-        short_description:'This tells you steps to generate a TWA(trusted web activity) / android app from a PWA.'
-    }]
-
-    import { color_mode } from "$lib/utils";
-
+import blog_list from './blog/content.json'
 </script>
-<div>
+<div class="dark:text-white space-y-5 mx-auto prose prose-a:text-blue-600 prose-a:hover:text-blue-500">
 {#each blog_list as blog}
-    <div class="{$color_mode=='light'?'text-black':'text-white'}">
+    <div class="shadow-lg p-4 rounded-lg shadow-blue-200">
         <a href="/blog/{blog.params}">
             <header class="font-bold text-xl">{blog.heading}</header>
-            <h3 class="text-xs text-gray-500">{blog.date}</h3>
-            <p>{blog.short_description}</p>
-        </a>
+        </a>    
+        <h3 class="text-xs text-gray-500">{blog.date}</h3>
+        <p>{blog.short_description}</p>
     </div>
 {/each}
 </div>
