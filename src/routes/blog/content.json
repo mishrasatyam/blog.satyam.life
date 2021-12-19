@@ -1,6 +1,6 @@
 [
     {
-        "params": "pwa_to_android_app",
+        "params": "pwa-to-android-app",
         "heading": "PWA to android app",
         "date": "2021-12-02",
         "short_description": "This tells you steps to generate a TWA(trusted web activity) / android app from a PWA."
