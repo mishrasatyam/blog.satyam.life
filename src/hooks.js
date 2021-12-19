@@ -1,8 +1,9 @@
 import {readdir,writeFile} from 'fs/promises'
 import {createReadStream} from 'fs'
 import {createInterface} from 'readline'
+import {dev} from '$app/env'
 export async function handle({ request, resolve }) {
-    let blog_folder_path = 'src/routes/blog'
+    let blog_folder_path = dev?'src/routes/blog':'pages/blog'
     let blog_list = await readdir(blog_folder_path)
     let detailed_blog_list = []
     blog_list.forEach(el => {
