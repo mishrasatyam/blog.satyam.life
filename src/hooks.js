@@ -4,6 +4,7 @@ import {createInterface} from 'readline'
 import {dev} from '$app/env'
 export async function handle({ request, resolve }) {
     let blog_folder_path = dev?'src/routes/blog':'pages/blog'
+    console.log(blog_folder_path)
     let blog_list = await readdir(blog_folder_path)
     let detailed_blog_list = []
     blog_list.forEach(el => {
