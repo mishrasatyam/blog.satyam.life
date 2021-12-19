@@ -52,7 +52,7 @@ Anyone can grab manifest.json and try the above method to create an app. So what
 
 So, if it is not verified that your app and website have same owner, your app will look like a chrome tab
 
-[Unverified App](/unverified_app.png)
+![Unverified App](/unverified_app.png)
 
 Verify Steps :
 
@@ -63,7 +63,7 @@ keytool -list -v -keystore <your_key>
 
 You will have to install some dependencies and enter password for your key. Your output will look like below:
 
-[Keytool output](/keytool_output.png)
+![Keytool output](/keytool_output.png)
 
 Copy the SHA256 value starting after SHA256: and paste it somewhere
 Now go back to you web app , find the folder which has your static files . For svelte kit it is static folder and create a file 
@@ -94,10 +94,13 @@ Add
 ]
 ```
 Replace com.your.package_name with your package_name value and XX:XX:XX:... with SHA256 value you had copied earlier
-You can view for satyam.life at `https://satyam.life/.well-known/assetlinks.json`
+You can view for satyam.life at 
+```
+https://satyam.life/.well-known/assetlinks.json
+```
 
 Now app looks like :
-[Verified app](/verified_app.png)
+![Verified App](/verified_app.png)
 
 Remember for production in google play store, you have to add play store's key's SHA256 to .well-known/assetlinks.json
 You can add multiple SHA256 cert sha256 cert fingerprints like
@@ -131,3 +134,8 @@ You can add multiple SHA256 cert sha256 cert fingerprints like
 ```
 
 Good luck! Check [APK](/app-release-signed.apk) here.
+<style>
+    img[alt="Unverified App"] { height : 250px; }
+
+    img[alt="Verified App"] { height: 250px}
+</style>    
