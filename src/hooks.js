@@ -28,7 +28,7 @@ export async function handle({ request, resolve }) {
                     rl.close()
                     rl.removeAllListeners()
                     detailed_blog_list.push(json)
-                    if(el == blog_list.at(-1)){
+                    if(el == blog_list[blog_list.length-1]){
                         writeFile(blog_folder_path+'/content.json',JSON.stringify(detailed_blog_list,null,4))
                     }
                 }
