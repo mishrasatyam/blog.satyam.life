@@ -4,5 +4,11 @@
         "heading": "PWA to android app",
         "date": "2021-12-02",
         "short_description": "This tells you steps to generate a TWA(trusted web activity) / android app from a PWA."
+    },
+    {
+        "params":"svelte-kit-auth-with-backend",
+        "heading":"Svelte kit auth with a backend server",
+        "date" : "2021-12-20",
+        "short_description":"This tells you how to authenticate svelte kit app with a backend server using jwt."
     }
 ]
