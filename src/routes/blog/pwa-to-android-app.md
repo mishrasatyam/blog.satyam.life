@@ -133,7 +133,7 @@ You can add multiple SHA256 cert sha256 cert fingerprints like
 ]
 ```
 
-Good luck! Check [APK](/app-release-signed.apk) here.
+Good luck! Check <a href="/app-release-signed.apk" download>APK</a> here.
 <style>
     img[alt="Unverified App"] { height : 250px; }
 
