@@ -1,5 +1,8 @@
+<script>
+    import {format_date} from '$lib/utils'
+</script>    
 # Svelte kit auth with a backend server
-###### Date : 2021-12-20 
+###### Date : <span use:format_date>2021-12-20</span> 
 ##### This tells you how to authenticate svelte kit app with a backend server using jwt.
 
 ## Step 0 : *Environment*

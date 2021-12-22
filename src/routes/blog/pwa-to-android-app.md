@@ -1,5 +1,8 @@
+<script>
+    import {format_date} from '$lib/utils'
+</script>    
 # PWA to android app
-###### Date : 2021-12-02 
+###### Date : <span use:format_date>2021-12-02</span> 
 ##### This tells you steps to generate a TWA(trusted web activity) / android app from a PWA.
 
 ## Step 0 *Environment*

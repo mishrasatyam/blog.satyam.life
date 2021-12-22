@@ -10,5 +10,11 @@
         "heading":"Svelte kit auth with a backend server",
         "date" : "2021-12-20",
         "short_description":"This tells you how to authenticate svelte kit app with a backend server using jwt."
+    },
+    {
+        "params":"why-you-should-not-learn-svelte",
+        "heading":"Why you should not learn svelte",
+        "date" : "2021-12-22",
+        "short_description":"This tells you why you should not learn svelte."  
     }
 ]
