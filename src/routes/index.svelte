@@ -1,3 +1,6 @@
+<svelte:head>
+    <meta name="description" content="Satyam's personal blog's">
+</svelte:head>
 <script>
 import blog_list from './blog/content.json'
 import {format_date} from '$lib/utils'

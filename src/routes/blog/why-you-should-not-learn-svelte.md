@@ -1,3 +1,6 @@
+<svelte:head>
+    <meta name="description" content="This tells you why you should not learn svelte.">
+</svelte:head>
 <script>
     import {format_date} from '$lib/utils'
 </script>    

@@ -1,3 +1,6 @@
+<svelte:head>
+    <meta name="description" content="This tells you how to authenticate svelte kit app with a backend server using jwt.">
+</svelte:head>
 <script>
     import {format_date} from '$lib/utils'
 </script>    

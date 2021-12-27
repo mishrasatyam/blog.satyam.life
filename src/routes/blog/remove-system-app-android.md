@@ -1,3 +1,6 @@
+<svelte:head>
+    <meta name="description" content="This will tell how you can remove any app on your android phone.">
+</svelte:head>
 <script>
     import {format_date} from '$lib/utils'
 </script>    

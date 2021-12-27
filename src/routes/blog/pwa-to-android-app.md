@@ -1,3 +1,6 @@
+<svelte:head>
+    <meta name="description" content="This tells you steps to generate a TWA(trusted web activity) / android app from a PWA.">
+</svelte:head>
 <script>
     import {format_date} from '$lib/utils'
 </script>    
