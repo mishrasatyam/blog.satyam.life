@@ -12,7 +12,7 @@ Once you learn svelte , you will not enjoy writing react code after you find out
 
 Let's see counter example in svelte
 
-```
+```javascript
 <script>
     let count = 0
 </script>

@@ -20,7 +20,7 @@ We will use http only cookie to send our jwt. We will use [fastify-jwt](https://
 
 Let's see login response after verifying user's credentials.
 
-```
+```javascript
 //body is whatever information you want to send to your logged in user
 const token = fastify.jwt.sign(body)
 let cookie_options = {signed: true,httpOnly:true,path:'/'}
@@ -34,7 +34,7 @@ return reply.setCookie('jwt',token,cookie_options).code(200).send()
 
 For protected routes use onRequest hook to check if requests cookies your jwt, if yes then verify it . Return appropriate response.
 
-```
+```javascript
 fastify.addHook('onRequest', (request, reply, done) => {
         let signed_jwt = request.cookies.jwt
         console.log(signed_jwt)
@@ -63,7 +63,7 @@ fastify.addHook('onRequest', (request, reply, done) => {
 ## Step 2 : *Frontend*
 
 In svelte-kit, you will have a login.svelte with function like below.  
-```
+```javascript
 async function handleSubmit(){
         error = undefined
         const method = 'post'
@@ -81,7 +81,7 @@ async function handleSubmit(){
 
 And we will have an endpoint named login.js at routes/auth/api . Here we send username and password to your fastify app, get a set-cookie header. Just return this header and you will see the cookie jwt in your Browser Network Tab> Application > Cookies . 
 
-```
+```javascript
 import {api_url} from '$lib/util' //api-url is your backend server url
 
 export async function post({body}){
@@ -107,7 +107,7 @@ export async function post({body}){
 
 Now goto src/hooks.js or create it. Here we parse cookies , decode jwt and take out information which you want your client aka browser to see and add that to locals . (It is not advised to make sensitive data like tokens, passswords visible to client.) getSession runs on server side rendering .getSession will populate sesssion in your load function.
 
-```
+```javascript
 import * as cookie from 'cookie';
 
 export async function handle({ request, resolve }) {
@@ -128,13 +128,13 @@ export function getSession({ locals }) {
 ```
 
 I add router = false to login.svelte to disable client side rendering for all links in the page. This causes getSession to run after you run login.js endpoint.
-```
+```javascript
 <script context="module">
     export const router = false
 </script>
 ```
 Then I check session in protected routes (which only authenticated users should see) layout by : 
-```
+```javascript
 <script context="module">
     export async function load({session}){
         if(!session?.user){ 
@@ -153,7 +153,7 @@ Then I check session in protected routes (which only authenticated users should 
 ```
 
 Also all request you make , make sure they have . In older version of svelte kit I didn't have to add credentials for request in load function but in latest version I had to.
-```
+```javascript
  const res = await fetch(url,{credentials:'include')
  ```
 
