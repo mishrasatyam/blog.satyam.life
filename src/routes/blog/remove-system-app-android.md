@@ -39,20 +39,24 @@ Inside developer options , find USB debugging option and turn it on, you might s
 
 ![Allow USB debugging](/allow_usb_debugging.jpeg)
 
-Goto your terminal and type adb devices, this will prompt your phone with : 
+Goto your terminal and type :
+```bash
+adb devices
+```
+this will prompt your phone with : 
 
 ![Allow USB debug from this computer](/allow_computer.jpeg)
 
 Select Always allow and click on ALLOW.
 
 Now check adb devices and you should have output like : 
-```
+```bash
 List of devices attached
 b5e2c7cb	device
 ```
 
 If you don't allow usb debug from computer, you will get :
-```
+```bash
 List of devices attached
 b5e2c7cb	unauthorized
 ```
@@ -76,7 +80,7 @@ But you can use any other way to find package name.
 > Please be sure to not remove any app which may be crucial for your system to run.
 
 Open adb shell
-```
+```bash
 adb shell
 ```
 Google podcast app came pre-installed in my phone. It's package name is 
@@ -85,16 +89,16 @@ com.google.android.apps.podcasts
 ```
 
 Let's remove it : 
-```
+```bash
 pm uninstall -k --user 0 com.google.android.apps.podcasts
 ```
 Output: 
-```
+```bash
 Success
 ```
 
 If you enter wrong package name which is not installed in your phone you will see : 
-```
+```bash
 Failure [not installed for 0]
 ```
 

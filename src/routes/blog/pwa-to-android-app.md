@@ -1,5 +1,5 @@
 <svelte:head>
-    <meta name="description" content="This tells you steps to generate a TWA(trusted web activity) / android app from a PWA.">
+    <meta name="description" content="Android app from a PWA.">
 </svelte:head>
 <script>
     import {format_date} from '$lib/utils'
@@ -11,7 +11,7 @@
 ## Step 0 *Environment*
 
 Node js 12+
-```
+```bash
 npm i -g @bubblewrap/cli
 ```
 
@@ -25,11 +25,11 @@ You can read more about PWA [here](https://web.dev/progressive-web-apps/) . This
 
 [Bubblewrap cli](https://github.com/GoogleChromeLabs/bubblewrap) takes your app's manifest.json as input , asks a few questions. For example, I am generating app from satyam.life website . I have attached commands and terminal screenshots below.
 
-```
+```bash
 bubblewrap init --manifest https://satyam.life/manifest.json
 ```
 followed by 
-```
+```bash
 bubblewrap build
 ```
 You don't have to worry about java and android dependencies , as bubblewrap will install them
@@ -39,7 +39,7 @@ It will also generate signing key for your app, if you can't provide one. Don't 
 In the end you will get a android app with apk format and aab format which you can upload on play store.
 
 Use 
-```
+```bash
 bubblewrap install
 ``` 
 command to install app on your connected device or open emulator device.
@@ -63,7 +63,7 @@ So, if it is not verified that your app and website have same owner, your app wi
 Verify Steps :
 
 Generate a sha256_cert_fingerprint from your signing key with 
-```
+```bash
 keytool -list -v -keystore <your_key>
 ```
 
