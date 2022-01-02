@@ -3,9 +3,9 @@ import { build, files, timestamp } from '$service-worker';
 
 const worker = self;
 const CACHE_NAME = `static-cache-${timestamp}`;
-
+console.log(files)
 const to_cache = build.concat(files);
-
+console.log(to_cache)
 worker.addEventListener('install', (event) => {
   console.log('[ServiceWorker] Install');
 
