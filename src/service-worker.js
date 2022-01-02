@@ -47,7 +47,9 @@ worker.addEventListener('fetch', (event) => {
       // console.log(11,event.request)
       return caches.open(CACHE_NAME).then((cache) => {
         // console.log(CACHE_NAME,event.request)
-        return await cache.match(event.request)
+        return cache.match(event.request).then((response)=>{
+          return response
+        })
       });
     }),
   );
