@@ -44,9 +44,9 @@ self.addEventListener('fetch', (event) => {
   }
   event.respondWith(
     fetch(event.request).catch(() => {
-      console.log(11,event.request)
+      // console.log(11,event.request)
       return caches.open(CACHE_NAME).then((cache) => {
-        console.log(22,cache)
+        console.log(CACHE_NAME,event.request)
         return cache.match(event.request);
       });
     }),
