@@ -53,6 +53,9 @@ worker.addEventListener('activate', (event) => {
 //   );
 // });
 self.addEventListener('fetch', function(e) {
+  if (e.request.mode !== 'navigate') {
+        return;
+  }
   e.respondWith(
       fetch(e.request).catch(function() {
           return caches.open(CACHE_NAME).then(function(cache) {
