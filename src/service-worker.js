@@ -37,16 +37,16 @@ worker.addEventListener('activate', (event) => {
   worker.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
-  console.log('[ServiceWorker] Fetch', event.request.url);
-  if (event.request.mode !== 'navigate') {
-    return;
-  }
-  event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.open(CACHE_NAME).then((cache) => {
-        return cache.match('offline.html');
-      });
-    }),
-  );
-});
+// self.addEventListener('fetch', (event) => {
+//   console.log('[ServiceWorker] Fetch', event.request.url);
+//   if (event.request.mode !== 'navigate') {
+//     return;
+//   }
+//   event.respondWith(
+//     fetch(event.request).catch(() => {
+//       return caches.open(CACHE_NAME).then((cache) => {
+//         return cache.match('offline.html');
+//       });
+//     }),
+//   );
+// });

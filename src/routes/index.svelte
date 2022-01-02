@@ -3,7 +3,7 @@
 </svelte:head>
 <script>
 import blog_list from './blog/content.json'
-blog_list = blog_list.sort((a,b) =>new Date(b.date) - new Date(a.date))
+blog_list.sort((a,b) =>new Date(b.date) - new Date(a.date))
 import {format_date} from '$lib/utils'
 
 </script>
