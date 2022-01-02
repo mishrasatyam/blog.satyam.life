@@ -42,19 +42,13 @@ worker.addEventListener('fetch', (event) => {
   if (event.request.mode !== 'navigate') {
     return;
   }
-  // event.respondWith(
-  //   fetch(event.request).catch(() => {
-  //     // console.log(11,event.request)
-  //     return caches.open(CACHE_NAME).then((cache) => {
-  //       console.log(CACHE_NAME,event.request)
-  //       return cache.match(event.request);
-  //     });
-  //   }),
-  // );
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      console.log(response)
-      return response || fetch(event.request);
+    fetch(event.request).catch(() => {
+      // console.log(11,event.request)
+      return caches.open(CACHE_NAME).then((cache) => {
+        // console.log(CACHE_NAME,event.request)
+        return cache
+      });
     }),
   );
 });
