@@ -55,7 +55,7 @@ worker.addEventListener('activate', (event) => {
 self.addEventListener('fetch', function(e) {
   e.respondWith(
       fetch(e.request).catch(function() {
-          return caches.open(cacheName).then(function(cache) {
+          return caches.open(CACHE_NAME).then(function(cache) {
               return cache.match(e.request);
           })
       })
