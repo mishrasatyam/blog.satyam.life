@@ -21,6 +21,11 @@
         "params":"remove-system-app-android",
         "heading":"Remove system app on android",
         "date":"2021-12-27",
-        "short_description":"This will tell how you can remove any app on your android phone."
+        "short_description":"Remove any app on your android phone."
+    },{
+        "params":"svelte-kit-jwt-auth",
+        "heading":"Svelte kit JWT auth",
+        "date":"2022-1-14",
+        "short_description":"Authentication in svelte-kit app with jwt and cookies"
     }
 ]
