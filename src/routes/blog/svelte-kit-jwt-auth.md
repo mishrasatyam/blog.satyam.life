@@ -76,15 +76,16 @@ import {parse} from 'cookie';
 import {verify} from 'jsonwebtoken'
 
 
-export async function handle({ request, resolve }) {
-	const cookies = parse(request.headers.cookie || '');
+export async function handle({ event, resolve }) {
+    const {request,locals} = event
+	const cookies = parse(request.headers.get('cookie') || '');
     //verify your jwt here, pass data to session object using locals
     try{
-		request.locals.user = cookies.jwt && verify(cookies.jwt, import.meta.env.VITE_JWT_PRIVATE_KEY); //this will give decoded value of jwt eg : {username:xyz}		
+		locals.user = cookies.jwt && verify(cookies.jwt, import.meta.env.VITE_JWT_PRIVATE_KEY); //this will give decoded value of jwt eg : {username:xyz}		
 	}catch(err){
-		request.locals.user=undefined
+		locals.user=undefined
 	}
-    const response = await resolve(request)
+    const response = await resolve(event)
 	return response;
 }
 ```
