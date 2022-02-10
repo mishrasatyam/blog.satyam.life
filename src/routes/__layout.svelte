@@ -1,3 +1,7 @@
+<script context="module">
+    export const router=false
+    export const hydrate = false
+</script>
 <script>
     import "../app.css";
 </script>
