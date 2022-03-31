@@ -1,8 +1,3 @@
-<svelte:head>
-    {#if !dev}
-    <script defer data-domain="blog.satyam.life" src="https://plausible.io/js/plausible.js"></script>
-    {/if}
-</svelte:head>
 <script context="module">
     export const router=false
     export const hydrate = false

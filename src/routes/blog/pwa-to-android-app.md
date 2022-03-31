@@ -19,14 +19,14 @@ Android Studio not must,can use emulator for testing app
 
 ## Step 1 : *Have a running PWA website*
 
-You can read more about PWA [here](https://web.dev/progressive-web-apps/) . This blog makes an assumption that your website is a PWA. For a svelte kit example you can check [github repo](https://github.com/mishrasatyam/satyam.life) hosted on [satyam.life](https://satyam.life).
+You can read more about PWA [here](https://web.dev/progressive-web-apps/) . This blog makes an assumption that your website is a PWA. For a svelte kit example you can check [github repo](https://github.com/mishrasatyam/satyam.contact) hosted on [satyam.contact](https://satyam.contact).
 
 ## Step 2 : *Use bubblewrap cli*
 
-[Bubblewrap cli](https://github.com/GoogleChromeLabs/bubblewrap) takes your app's manifest.json as input , asks a few questions. For example, I am generating app from satyam.life website . I have attached commands and terminal screenshots below.
+[Bubblewrap cli](https://github.com/GoogleChromeLabs/bubblewrap) takes your app's manifest.json as input , asks a few questions. For example, I am generating app from satyam.contact website . I have attached commands and terminal screenshots below.
 
 ```bash
-bubblewrap init --manifest https://satyam.life/manifest.json
+bubblewrap init --manifest https://satyam.contact/manifest.json
 ```
 followed by 
 ```bash
@@ -100,9 +100,9 @@ Add
 ]
 ```
 Replace com.your.package_name with your package_name value and XX:XX:XX:... with SHA256 value you had copied earlier
-You can view for satyam.life at 
+You can view for satyam.contact at 
 ```
-https://satyam.life/.well-known/assetlinks.json
+https://satyam.contact/.well-known/assetlinks.json
 ```
 
 Now app looks like :

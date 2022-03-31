@@ -159,11 +159,11 @@ Also all request you make , make sure they have . In older version of svelte kit
 
  Also your backend url should be sub domain of your frontend url for fetch in load function to work. For example if your website is at 
  ```
- satyam.life
+ satyam.contact
  ```
 your backend should be at
 ```
-api.satyam.life
+api.satyam.contact
 ```
 
 From svelte kit docs: 
