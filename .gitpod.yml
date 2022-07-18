@@ -1,6 +1,6 @@
 tasks:
   - name : Dev
-    init: pnpm install
+    before: pnpm install
     command: pnpm dev
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
