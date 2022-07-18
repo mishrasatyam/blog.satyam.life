@@ -1,6 +1,5 @@
 tasks:
   - name : Dev
-    before: npm i -g pnpm
     init: pnpm install
     command: pnpm dev
 
